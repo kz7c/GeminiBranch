@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    /* 出力構成 */
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    /* モジュール設定（Node.js ESM想定） */
+    "module": "NodeNext",
+    "target": "ES2019",
+    "moduleResolution": "NodeNext",
+
+    /* 型定義を配布するために必須 */
+    "declaration": true,
+    "declarationMap": true,
+
+    /* ソースマップ（任意だが便利） */
+    "sourceMap": true,
+
+    /* 型チェック */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    /* ライブラリ向け重要オプション */
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+
+    /* 不要なものは切る */
+    "types": ["node"],
+
+    /* ビルド安定用 */
+    "skipLibCheck": true
+  },
+  "include": ["src"]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "geminibranch",
+  "version": "1.0.0",
+  "description": "Perform conditional branching using Gemini in natural language.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kz7c/GeminiBranch.git"
+  },
+  "keywords": [
+    "AI",
+    "Gemini",
+    "Branching",
+    "Google",
+    "GenAI",
+    "Naturral Language"
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/kz7c/GeminiBranch/issues"
+  },
+  "homepage": "https://github.com/kz7c/GeminiBranch#readme",
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@google/genai": "^1.35.0"
+  }
+}
