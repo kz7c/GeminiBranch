@@ -1,10 +1,10 @@
 {
-  "name": "geminibranch",
+  "name": "gemini-branch",
   "version": "1.0.0",
   "description": "Perform conditional branching using Gemini in natural language.",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -16,9 +16,9 @@
     "Branching",
     "Google",
     "GenAI",
-    "Naturral Language"
+    "Natural Language"
   ],
-  "author": "",
+  "author": "kz7c",
   "license": "MIT",
   "type": "module",
   "bugs": {
