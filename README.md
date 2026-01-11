@@ -19,9 +19,21 @@ npm install gemini-branch
 ## Usage
 First, obtain a Google Gemini API key. You can get one from the [Google AI Studio](https://aistudio.google.com/app/apikey).
 
-=========ここにサンプル後で書く=========
-```
+```typescript
+import { GeminiBranch } from 'gemini-branch';
+import type { GeminiBranchResult } from 'gemini-branch';
 
+let globalBranchResult: GeminiBranchResult | null = null;
+
+globalBranchResult = await GeminiBranch({
+    condition: "Which is the morning greeting?",
+    choices: ["good morning", "hello", "good evening"],
+    apiKey: "YOUR GEMINI API KEY",
+    model: "gemma-3-27b-it",
+});
+
+console.log(globalBranchResult)
+// { response: true, result: 'good morning', message: 'Success' }
 ```
 
 ## Model Selection

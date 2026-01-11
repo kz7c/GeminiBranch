@@ -1,6 +1,6 @@
 {
   "name": "gemini-branch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Perform conditional branching using Gemini in natural language.",
   "main": "dist/index.js",
   "scripts": {
