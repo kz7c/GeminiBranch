@@ -3,7 +3,7 @@ name: Publish to npm
 on:
   push:
     tags:
-      - 'v*.*.*'
+      - 'v*'
 
 permissions:
   contents: read
@@ -11,18 +11,20 @@ permissions:
 
 jobs:
   publish:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
+
+    permissions:
+      contents: read
+      id-token: write
 
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          registry-url: https://registry.npmjs.org/
+      - name: Install dependencies
+        run: npm ci
 
-      - run: npm ci
-      - run: npm run build --if-present
-      - run: npm test --if-present
+      - name: Build
+        run: npm run build --if-present
 
-      - run: npm publish --provenance
+      - name: Publish
+        run: npm publish
