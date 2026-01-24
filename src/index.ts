@@ -82,7 +82,7 @@ export async function GeminiBranch( args: GeminiBranchOptions ): Promise<GeminiB
     const responsemsg = String(response.text ?? "").trim();
 
     // args.else was selected(≒ Success)
-    if (args.else && responsemsg === (args.else)) {
+    if (args.else && responsemsg === args.else) {
       return {
         response: true,
         result: args.else,
