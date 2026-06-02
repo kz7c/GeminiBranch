@@ -57,10 +57,11 @@ export async function GeminiBranch( args: GeminiBranchOptions ): Promise<GeminiB
     }
 
     // Gemini API call
-    const ai = new GoogleGenAI({apiKey: args.apiKey});
-    const response = await ai.models.generateContent({
+    const client = new GoogleGenAI({apiKey: args.apiKey});
+
+    let interaction = await client.interactions.create({
       model: args.model,
-      contents: `
+      input: `
       You are a strict conditional branching engine.
       From the "choices" array in the JSON below, output **exactly one element that matches completely**.
 
@@ -79,7 +80,7 @@ export async function GeminiBranch( args: GeminiBranchOptions ): Promise<GeminiB
       `,
     });
     
-    const responsemsg = String(response.text ?? "").trim();
+    const responsemsg = String(interaction.output_text ?? "").trim();
 
     // args.else was selected(≒ Success)
     if (args.else && responsemsg === args.else) {

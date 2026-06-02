@@ -33,6 +33,6 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@google/genai": "^1.35.0"
+    "@google/genai": "^2.0.0"
   }
 }
