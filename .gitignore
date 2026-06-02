@@ -1,3 +1,4 @@
 .env
+*test.ts
 /node_modules
 /dist
